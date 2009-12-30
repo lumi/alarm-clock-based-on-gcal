@@ -6,7 +6,7 @@ CREATE TABLE kuskit (
 	kuski_id SERIAL PRIMARY KEY NOT NULL,
 	name VARCHAR(320) NOT NULL,
 	email VARCHAR(320) UNIQUE,
-	phone INTEGER,
+	phone BIGINT,
 	reminder_minutes INTEGER NOT NULL DEFAULT 60,
 	CONSTRAINT email_to_user_id UNIQUE (email, kuski_id)
 );
